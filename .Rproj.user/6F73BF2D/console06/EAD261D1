@@ -1,0 +1,6 @@
+]0;~/monefystats[?1034h[36mananthu[m@[32mAnanthapadmanabhans-MacBook-Pro:[33;1m~/monefystats[m$ [K[36mananthu[m@[32mAnanthapadmanabhans-MacBook-Pro:[33;1m~/monefystats[m$ i git init
+Initialized empty Git repository in /Users/ananthu/monefystats/.git/
+]0;~/monefystats[36mananthu[m@[32mAnanthapadmanabhans-MacBook-Pro:[33;1m~/monefystats[m$ git push origin master
+error: src refspec master does not match any.
+error: failed to push some refs to 'origin'
+]0;~/monefystats[36mananthu[m@[32mAnanthapadmanabhans-MacBook-Pro:[33;1m~/monefystats[m$ git add .

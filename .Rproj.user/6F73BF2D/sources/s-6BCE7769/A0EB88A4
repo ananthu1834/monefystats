@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1514701016632.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "A0EB88A4",
+    "lastKnownWriteTime" : 1541078088,
+    "last_content_update" : 1541078088570,
+    "path" : "~/monefystats/R/stats.R",
+    "project_path" : "R/stats.R",
+    "properties" : {
+        "cursorPosition" : "8,65",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

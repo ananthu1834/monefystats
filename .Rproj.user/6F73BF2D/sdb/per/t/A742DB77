@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "#' @import dplyr\n#' @import stringr\n\n#' @export\nread_and_clean <- function(file) {\n\n  raw_data <- read.csv(file, stringsAsFactors = F)\n\n  clean_data <- raw_data %>%\n    select(date, account, category, amount, description) %>%\n    clean_dates() %>%\n    clean_amount()\n\n  saveRDS(clean_data, 'expenses_clean.rds')\n}\n\nclean_dates <- . %>% mutate(date = as.POSIXct(strptime(date, format = '%d/%m/%Y')))\n\nclean_amount <- . %>% mutate(amount = as.numeric(str_replace_all(amount, ',', ''))*-1)\n",
+    "created" : 1514698196132.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3325775134",
+    "id" : "A742DB77",
+    "lastKnownWriteTime" : 1514702491,
+    "last_content_update" : 1514702491361,
+    "path" : "~/monefystats/R/read_and_clean.R",
+    "project_path" : "R/read_and_clean.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

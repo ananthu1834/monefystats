@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "\n#' @export\nall_categories <- function(file = 'expenses_clean.rds', df = NULL) give_uniques(file, df, 'category')\n\n#' @export\nall_accounts <- function(file = 'expenses_clean.rds', df = NULL) give_uniques(file, df, 'account')\n\ngive_uniques <- function(file = 'expenses_clean.rds', df = NULL, col) {\n  if(is.null(df)) df = readRDS(file)\n  df[[col]] %>% unique()\n}\n",
+    "created" : 1514702798126.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1335398213",
+    "id" : "67DE6452",
+    "lastKnownWriteTime" : 1514703160,
+    "last_content_update" : 1514703160598,
+    "path" : "~/monefystats/R/helper.R",
+    "project_path" : "R/helper.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

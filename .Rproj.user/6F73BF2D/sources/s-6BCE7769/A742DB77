@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1514698196132.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3325775134",
+    "id" : "A742DB77",
+    "lastKnownWriteTime" : 1514702491,
+    "last_content_update" : 1514702491361,
+    "path" : "~/monefystats/R/read_and_clean.R",
+    "project_path" : "R/read_and_clean.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

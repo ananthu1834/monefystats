@@ -2,7 +2,7 @@
 
 export(all_accounts)
 export(all_categories)
-export(monthly_investments)
+export(monthly_investments_till_financial_independence)
 export(plot_expense_trend)
 export(read_and_clean)
 import(dplyr)

@@ -16,7 +16,7 @@ future_expense <- function(current_expense, years, currency_inflation, lifestyle
 }
 
 total_expenses_for_period <- function(current_monthly_expense, start_year, withdrawal_period, currency_inflation, lifestyle_inflation) {
-  years_of_period = start_year:(start_year + withdrawal_period)
+  years_of_period = start_year:(start_year + withdrawal_period-1)
   total_expenses = 0
   for (i in years_of_period) total_expenses = total_expenses + 12*future_expense(current_monthly_expense, i, currency_inflation, lifestyle_inflation)
   total_expenses

@@ -1,10 +1,23 @@
 Package: monefystats
 Type: Package
 Title: Insights into monefy expenses and some additional finance helpers
-Version: 0.1.0
+Version: 0.2.0
 Author: Ananthapadmanabhan 
 Maintainer: Ananthapadmanabhan <ananthubbl@gmail.com>
 Description: Plots and aggregations over expenses recorded using monefy app
+Imports:
+  lubridate,
+  stringr,
+  plyr,
+  dplyr,
+  ggplot2
+Collate:
+  helper.R
+  read_and_clean.R
+  stats.R
+  financial_independence.R
+Depends:
+    R (>= 3.4.0)
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.1

@@ -2,11 +2,19 @@
 % Please edit documentation in R/financial_independence.R
 \name{monthly_investments_till_financial_independence}
 \alias{monthly_investments_till_financial_independence}
-\title{Monthly inestment for Financial Independence}
+\title{Monthly investment for Financial Independence}
 \usage{
-monthly_investments_till_financial_independence(current_monthly_expense,
-  start_year, withdrawal_period, currency_inflation, lifestyle_inflation,
-  mf_growth, sip_growth, life_expectancy, age_current)
+monthly_investments_till_financial_independence(
+  current_monthly_expense,
+  start_year,
+  withdrawal_period,
+  currency_inflation,
+  lifestyle_inflation,
+  mf_growth,
+  sip_growth,
+  life_expectancy,
+  age_current
+)
 }
 \description{
 Get monthly investment needed into mutual funds as of now for achieving fin independence by a given period of time.

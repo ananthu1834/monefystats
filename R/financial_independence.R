@@ -1,3 +1,5 @@
+## Some additional features in this file. Yet to validate these functions thoroughly. This is an attempt to estimate metrics related to attaining financial independence
+# given certain input factors
 
 .compounding_factor <- function(rate, years) (1+(0.01*rate))^years
 
@@ -40,7 +42,7 @@ lumpsum_needed_for_ind <- function(current_monthly_expense, start_year, withdraw
   total_savings_start_period + total_expenses_start_period
 }
 
-#' @title Monthly inestment for Financial Independence
+#' @title Monthly investment for Financial Independence
 #' @description Get monthly investment needed into mutual funds as of now for achieving fin independence by a given period of time.
 #' Returns the monthly investment needed for the current year. And if sip_growth > 0, this means the monthly investment is planned to increase by the same every year (maybe due to more earning, inflation etc)
 #' @export

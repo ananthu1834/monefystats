@@ -1,10 +1,10 @@
 #' @import dplyr
 #' @import stringr
 
-#' @title Read and clean raw monefy exported csv
-#' @title Read, clean and write monefy exported csv data to an rds file
+#' @title Read and clean raw Monefy exported csv
+#' @title Read, clean and write Monefy exported csv data to an rds file
 #' @param file path to the raw csv exported from monefy app
-#' @param delimer_character delimer character chosen during export
+#' @param delimer_character delimiter character chosen during export
 #' @param decimal_separator decimal separator chosen during export
 #' @param write_path path to write the cleaned rds file into
 #' @export

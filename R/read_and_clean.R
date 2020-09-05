@@ -19,6 +19,8 @@ read_and_clean_raw_data <- function(file, delimiter_character = ",", decimal_sep
     add_transaction_type()
 
   saveRDS(clean_data, write_path)
+
+  return(normalizePath(write_path))
 }
 
 read_raw_exported_file <- function(file, delimiter_character = ",", decimal_separator = ".") {

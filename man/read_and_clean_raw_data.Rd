@@ -2,7 +2,7 @@
 % Please edit documentation in R/read_and_clean.R
 \name{read_and_clean_raw_data}
 \alias{read_and_clean_raw_data}
-\title{Read and clean raw monefy exported csv}
+\title{Read and clean raw Monefy exported csv}
 \usage{
 read_and_clean_raw_data(
   file,
@@ -18,10 +18,10 @@ read_and_clean_raw_data(
 
 \item{write_path}{path to write the cleaned rds file into}
 
-\item{delimer_character}{delimer character chosen during export}
+\item{delimer_character}{delimiter character chosen during export}
 }
 \description{
-Read and clean raw monefy exported csv
+Read and clean raw Monefy exported csv
 
-Read, clean and write monefy exported csv data to an rds file
+Read, clean and write Monefy exported csv data to an rds file
 }

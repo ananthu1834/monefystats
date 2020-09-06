@@ -10,26 +10,29 @@ plot_transaction_trend(
   transaction_type_to_filter = "all",
   start_time = NULL,
   end_time = NULL,
+  description_pattern = ".*",
   cleaned_file = "expenses_clean.rds",
   bin_by = "month",
   agg_type = "sum"
 )
 }
 \arguments{
-\item{category_to_filter}{The monefy 'category' for which the chart has to be plotted.
+\item{category_to_filter}{The Monefy 'category' for which the chart has to be plotted.
 This can be a vector of categories to plot for more than one. Also, use 'all' for selecting all categories}
 
-\item{account_to_filter}{The monefy 'account' for which the chart has to be plotted.
+\item{account_to_filter}{The Monefy 'account' for which the chart has to be plotted.
 This can be a vector of accounts to plot for more than one. Also, use 'all' for selecting all accounts}
 
 \item{transaction_type_to_filter}{The transaction type for which the chart has to be plotted. This could be either "income" or "expense".
 Use 'all' for selecting both - this will consider amount as is, which means expenses will have the value of 'amount' as negative}
 
-\item{start_time}{start time from which histogram should be plotted. Dafault - start of data}
+\item{start_time}{start time from which histogram should be plotted. Default - start of data}
 
 \item{end_time}{end time from which histogram should be plotted. Default - end of data}
 
-\item{cleaned_file}{path to the cleaned and ready to consume file with monefy data. To create clean file, use \code{\link{read_and_clean_raw_data}}}
+\item{description_pattern}{regex pattern to match transaction description}
+
+\item{cleaned_file}{path to the cleaned and ready to consume file with Monefy data. To create clean file, use \code{\link{read_and_clean_raw_data}}}
 
 \item{bin_by}{the period to bin the aggregation. Default - 'month'}
 

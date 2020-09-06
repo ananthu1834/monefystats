@@ -6,27 +6,52 @@ plot_transaction_trend_shiny <- function(input, cleaned_file, agg_type) {
                            end_time = input$date_range[2],
                            bin_by = input$bin_by,
                            cleaned_file = cleaned_file,
-                           transaction_type_to_filter = input$transaction_type)
+                           transaction_type_to_filter = input$transaction_type,
+                           description_pattern = input$description_pattern,
+                           agg_type = agg_type)
+}
+
+filter_relevant_data <- function(df, input) {
+    df %>% get_relevant_input_data(category_to_filter = input$category,
+                                   account_to_filter = input$account,
+                                   start_time = input$date_range[1],
+                                   end_time = input$date_range[2],
+                                   transaction_type_to_filter = input$transaction_type,
+                                   description_pattern = input$description_pattern)
 }
 
 function(input, output, session) {
 
-    clean_file_path <- reactive({
+    raw_file_path <- reactive({
         input_file_path = auto_find_input_file()
         if(length(input_file_path) == 0) req(input$exported_file)
         if(!is.null(input$exported_file$datapath)) input_file_path = input$exported_file$datapath
-        read_and_clean_raw_data(delimiter_character = input$delimiter_character, decimal_separator = input$decimal_separator, file = input_file_path)
+        input_file_path
+    })
+
+    clean_file_path <- reactive({
+
+        read_and_clean_raw_data(delimiter_character = input$delimiter_character, decimal_separator = input$decimal_separator, file = raw_file_path())
     })
 
     output$transaction_plot_sum <- renderPlot({
+        req(input$account)
+        req(input$category)
+        req(input$description_pattern)
         plot_transaction_trend_shiny(input, cleaned_file = clean_file_path(), agg_type = "sum")
     })
 
     output$transaction_plot_mean <- renderPlot({
+        req(input$account)
+        req(input$category)
+        req(input$description_pattern)
         plot_transaction_trend_shiny(input, cleaned_file = clean_file_path(), agg_type = "mean")
     })
 
     output$transaction_plot_count <- renderPlot({
+        req(input$account)
+        req(input$category)
+        req(input$description_pattern)
         plot_transaction_trend_shiny(input, cleaned_file = clean_file_path(), agg_type = "count")
     })
 
@@ -56,5 +81,23 @@ function(input, output, session) {
                        language = "en", width = NULL)
     })
 
+    output$description_filter <- renderUI({
+        req(input$account)
+        req(input$category)
+        textInput("description_pattern",
+                  label = h4("Regex match transaction description"),
+                  value = ".*",
+                  placeholder = "Add Regex pattern. For eg: .*kfc.*")
+    })
+
+    output$raw_data <- DT::renderDT({
+        DT::datatable(read.csv(raw_file_path(), sep = input$delimiter_character, dec = input$decimal_separator),
+                      options = list(scrollX = TRUE))
+    })
+
+    output$clean_data <- DT::renderDT({
+        DT::datatable(readRDS(clean_file_path()) %>% filter_relevant_data(input),
+                      options = list(scrollX = TRUE))
+    })
 }
 

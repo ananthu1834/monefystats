@@ -26,4 +26,4 @@ Here is an example screenshot to get a sense of what the app looks like (will ad
 runApp('monefyShiny')
 ```
 
-<img src="https://raw.githubusercontent.com/ananthu1834/monefystats/master/man/figures/shiny_dashboard.png" width="500" /> 
+<img src="https://raw.githubusercontent.com/ananthu1834/monefystats/master/man/figures/shiny_dashboard.png" width="800" /> 

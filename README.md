@@ -27,3 +27,15 @@ runApp('monefyShiny')
 ```
 
 <img src="https://raw.githubusercontent.com/ananthu1834/monefystats/master/man/figures/shiny_dashboard.png" width="800" /> 
+
+### Features
+
+* Automatic parsing and cleaning of Monefy exported CSV file
+* Trend plot of expenses, incomes and combined with configurable time bins
+* Filter by account, category, transaction_type and time period
+* Regex search of matching description field as an advanced filter
+* Automatic detection of latest input csv for Mac users downloading the file into standard 'Downloads' directory
+* Visualise raw and parsed data as tables
+* Basic statistics for the given filter criteria
+
+

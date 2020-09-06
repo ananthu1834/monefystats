@@ -20,7 +20,7 @@ devtools::install_github('ananthu1834/monefystats')
 
 The package uses csv data exported by the Monefy app. I could not find any APIs to get this data directly, so please inform me if someone know about it and I can add the capability to do so.
 
-Here is an example screenshot to get a sense of what the app looks like (will add a demo soon). Run the follwoing command to get it running on your system
+Here is an example screenshot to get a sense of what the app looks like (will add a demo soon). Run the following command to get it running on your system
 
 ```{r}
 runApp('monefyShiny')

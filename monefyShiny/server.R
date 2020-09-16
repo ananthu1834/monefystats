@@ -30,7 +30,8 @@ function(input, output, session) {
     })
 
     clean_file_path <- reactive({
-
+        input_file_path = auto_find_input_file()
+        if(length(input_file_path) == 0) req(input$exported_file)
         read_and_clean_raw_data(delimiter_character = input$delimiter_character, decimal_separator = input$decimal_separator, file = raw_file_path())
     })
 

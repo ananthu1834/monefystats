@@ -2,7 +2,7 @@
   Monefy Stats
 </h1>
 
-Package to visualize Monefy transaction data
+App to visualize and gain additional insights into your Monefy transaction data. Click here for the hosted solution -> https://ananthu1835.shinyapps.io/monefyshiny/
 
 ### Introduction
 
@@ -18,9 +18,11 @@ devtools::install_github('ananthu1834/monefystats')
 ```
 ### Usage
 
+The App is hosted here and is open for anyone to use -> https://ananthu1835.shinyapps.io/monefyshiny/. But, you can also install it on your system if you are paranoid about data privacy.
+
 The package uses csv data exported by the Monefy app. I could not find any APIs to get this data directly, so please inform me if someone know about it and I can add the capability to do so.
 
-Here is an example screenshot to get a sense of what the app looks like (will add a demo soon). Run the follwoing command to get it running on your system
+Here is an example screenshot to get a sense of what the app looks like in action. Run the following command to get it running on your system
 
 ```{r}
 runApp('monefyShiny')

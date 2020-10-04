@@ -29,6 +29,8 @@ get_all_categories_for_account <- function(file = 'expenses_clean.rds', df = NUL
 #' @export
 auto_find_input_file <- function() {
 
+  flog.info("Trying to auto detect exported file..")
+
   possible_files = list.files(path = "~/Downloads/", pattern = "Monefy.Data", full.names = T)
   if(length(possible_files) == 0) return(character(0))
 
@@ -38,4 +40,26 @@ auto_find_input_file <- function() {
     which.max()
 
   possible_files[which_latest]
+}
+
+
+#' @export
+get_demo_data_file <- function() {
+  flog.info("Trying to read demo file..")
+  system.file("demo_data/demo_exported.csv", package = "monefystats")
+}
+
+#' @export
+existing_raw_file_path <- function() {
+
+  flog.info("Running function: existing_raw_file_path")
+
+  input_file_path = auto_find_input_file()
+
+  if(length(input_file_path) == 0) {
+    flog.info("Reactive fn: existing_raw_file_path - Auto detect of file failed. Checking for demo data")
+    input_file_path = get_demo_data_file()
+  }
+
+  input_file_path
 }

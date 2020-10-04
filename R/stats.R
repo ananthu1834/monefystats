@@ -25,6 +25,7 @@ plot_transaction_trend <- function(category_to_filter = "all",
                                    bin_by = 'month',
                                    agg_type = 'sum') {
 
+  flog.info(str_interp("Reading cleaned file to plot. File path: ${cleaned_file}"))
   clean_data = readRDS(cleaned_file)
 
   relevant_data = get_relevant_input_data(clean_data, category_to_filter, account_to_filter, transaction_type_to_filter, start_time, end_time, description_pattern)

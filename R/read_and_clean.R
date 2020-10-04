@@ -1,5 +1,6 @@
 #' @import dplyr
 #' @import stringr
+#' @import futile.logger
 
 #' @title Read and clean raw Monefy exported csv
 #' @title Read, clean and write Monefy exported csv data to an rds file

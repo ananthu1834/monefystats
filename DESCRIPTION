@@ -10,7 +10,8 @@ Imports:
   stringr,
   plyr,
   dplyr,
-  ggplot2
+  ggplot2,
+  futile.logger
 Collate:
   helper.R
   read_and_clean.R

@@ -3,6 +3,8 @@ library(shinydashboard)
 library(shinycssloaders)
 library(dplyr)
 library(monefystats)
+library(futile.logger)
+library(stringr)
 
 
 dashboardpage_skin = "green"
@@ -90,9 +92,9 @@ sidebar <- dashboardSidebar(
               accept = c("text/csv",
                          "text/comma-separated-values,text/plain",
                          ".csv"),
-              placeholder = if_else(length(auto_find_input_file()) == 0,
+              placeholder = if_else(length(existing_raw_file_path()) == 0,
                                     "File not chosen",
-                                    stringr::str_interp("Auto detected file: ${auto_find_input_file()}"))),
+                                    stringr::str_interp("Auto detected file: ${existing_raw_file_path()}"))),
     uiOutput('account_filter'),
     uiOutput('category_filter'),
     uiOutput('range_filter'),
